@@ -7,7 +7,7 @@ import (
 )
 
 type User struct {
-	ID int `gorm:"AUTO_INCREMENT"`
+	ID int `gorm:"primary_key;AUTO_INCREMENT"`
 	UUID  uuid.UUID   `json:"id"`
 	Email string
 	UserName string
