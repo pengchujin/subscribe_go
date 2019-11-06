@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/pengchujin/subscribe/routes"
-	"github.com/pengchujin/subscribe/database"
-	"github.com/pengchujin/subscribe/config"
+	"github.com/pengchujin/subscribe_go/routes"
+	"github.com/pengchujin/subscribe_go/database"
+	"github.com/pengchujin/subscribe_go/config"
 	"fmt"
 )
 

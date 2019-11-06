@@ -4,8 +4,8 @@ package database
 import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/pengchujin/subscribe/config"
-	"github.com/pengchujin/subscribe/models"
+	"github.com/pengchujin/subscribe_go/config"
+	"github.com/pengchujin/subscribe_go/models"
 )
 
 var DB *gorm.DB
