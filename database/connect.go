@@ -3,7 +3,7 @@ package database
 
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/pengchujin/subscribe_go/config"
 	"github.com/pengchujin/subscribe_go/models"
 )
@@ -16,7 +16,7 @@ func InitDB() (*gorm.DB, error) {
 	if err == nil {
 		db.DB().SetMaxIdleConns(conf.MaxIdleConn)
 		DB = db
-		db.AutoMigrate(&models.User)
+		db.AutoMigrate(&models.User{})
 		return db, err
 	}
 	return nil, err
