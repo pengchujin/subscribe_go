@@ -10,6 +10,7 @@ type Config struct {
 	Addr        string `yaml:"addr"`
 	DSN         string `yaml:"dsn"`
 	MaxIdleConn int    `yaml:"max_idle_conn"`
+	JwtSecret         string `yaml:"jwtSecret"`
 }
 
 var config *Config

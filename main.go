@@ -13,7 +13,6 @@ func main() {
 		return
 	}
 	db, err := database.InitDB()
-	fmt.Println(err)
 	if err != nil {
 		fmt.Println("err open databases")
 		return

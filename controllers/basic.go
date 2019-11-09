@@ -14,3 +14,9 @@ func (basic *Basic) JsonSuccess (c *gin.Context, status int, h gin.H) {
 	return
 }
 
+func (basic *Basic) JsonFail (c *gin.Context, status int, message string) {
+	c.JSON(status, gin.H{
+		"status": "fail",
+		"message": message,
+	})
+}

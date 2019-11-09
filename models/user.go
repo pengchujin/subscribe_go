@@ -11,14 +11,14 @@ type User struct {
 	UUID  uuid.UUID   `json:"id"`
 	Email string
 	UserName string
-	EncriptdPassword string
+	EncryptedPassword string
 	CreatedAt time.Time  `json:"created_at"`
   UpdatedAt time.Time `json:"updated_at"`
 }
 
 func (user *User) BeforeCreate(scope *gorm.Scope) error {
   scope.SetColumn("CreatedAt", time.Now())
-  scope.SetColumn("ID", uuid.NewV4().String())
+  scope.SetColumn("UUID", uuid.NewV4().String())
   return nil
 }
 

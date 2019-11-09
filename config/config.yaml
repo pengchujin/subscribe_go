@@ -1,4 +1,4 @@
 addr: :9000
-
+jwtSecret: "test"
 dsn: "host=127.0.0.1 port=5555 user=test dbname=test password=test sslmode=disable"
 max_idle_conn: 100
