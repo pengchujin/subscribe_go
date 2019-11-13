@@ -13,7 +13,8 @@ type User struct {
 	UserName string
 	EncryptedPassword string
 	CreatedAt time.Time  `json:"created_at"`
-  UpdatedAt time.Time `json:"updated_at"`
+	UpdatedAt time.Time `json:"updated_at"`
+	Nodes []Node `gorm:"foreignkey:NodeID"`
 }
 
 func (user *User) BeforeCreate(scope *gorm.Scope) error {
